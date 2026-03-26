@@ -12,7 +12,7 @@ MCP Agent   MCP Agent  MCP Agent
 
 ## 模块说明
 
-### 1. 特征提取模块 (`aliyun_mcp_feature_extraction.py`)
+### 1. 特征提取模块 (`feature_extraction.py`)
 
 **功能**: 使用MCP agent从US101交通数据中提取多种特征
 - **基础特征**: 数值列的统计特征（均值、标准差、偏度、峰度等）
@@ -22,7 +22,7 @@ MCP Agent   MCP Agent  MCP Agent
 
 **MCP Agent作用**: 智能分析数据并生成结构化的特征描述
 
-### 2. 语义分析模块 (`aliyun_mcp_semantic_analysis.py`)
+### 2. 语义分析模块 (`semantic_analysis.py`)
 
 **功能**: 基于提取的特征进行语义分析
 - 交通模式识别
@@ -33,7 +33,7 @@ MCP Agent   MCP Agent  MCP Agent
 
 **MCP Agent作用**: 将数值特征转换为可理解的语义描述
 
-### 3. 轨迹预测模块 (`aliyun_mcp_trajectory_prediction.py`)
+### 3. 轨迹预测模块 (`trajectory_prediction.py`)
 
 **功能**: 预测车辆未来轨迹
 - 位置预测
@@ -62,32 +62,21 @@ your_actual_dashscope_api_key_here
 
 #### 方式1: 使用主程序（推荐）
 ```bash
-python main.py --csv ../datas/0750_0805_us101.csv --vehicle_id 2 --steps 10
+python main.py --csv ../datas/0750_0805_us101.csv
 ```
 
 #### 方式2: 单独运行模块
 ```bash
 # 特征提取
-python aliyun_mcp_feature_extraction.py ../datas/0750_0805_us101.csv --api_key your_key
+python feature_extraction.py ../datas/0750_0805_us101.csv --api_key your_key
 
 # 语义分析
-python aliyun_mcp_semantic_analysis.py --feature_json output/features_xxx.json --api_key your_key
+python semantic_analysis.py --feature_json output/features_xxx.json --api_key your_key
 
 # 轨迹预测
-python aliyun_mcp_trajectory_prediction.py --csv ../datas/0750_0805_us101.csv --vehicle_id 2 --api_key your_key
+python trajectory_prediction.py --csv ../datas/0750_0805_us101.csv --vehicle_id 2 --api_key your_key
 ```
 
-### 测试MCP连接
-
-在运行主程序前，建议先测试MCP agent连接：
-
-```bash
-# 快速测试
-python quick_mcp_test.py
-
-# 详细测试
-python test_mcp_connection.py
-```
 
 ## 输出文件
 
