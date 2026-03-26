@@ -20,7 +20,7 @@ MCP Agent   MCP Agent  MCP Agent
 - **时空特征**: 时间模式、空间模式、轨迹特征
 - **统计特征**: 相关性分析、异常值检测、分布分析
 
-**MCP Agent作用**: 智能分析数据并生成结构化的特征描述
+**Agent作用**: 智能分析数据并生成结构化的特征描述
 
 ### 2. 语义分析模块 (`semantic_analysis.py`)
 
@@ -31,7 +31,7 @@ MCP Agent   MCP Agent  MCP Agent
 - 安全评估
 - 效率分析
 
-**MCP Agent作用**: 将数值特征转换为可理解的语义描述
+**Agent作用**: 将数值特征转换为可理解的语义描述
 
 ### 3. 轨迹预测模块 (`trajectory_prediction.py`)
 
@@ -41,7 +41,7 @@ MCP Agent   MCP Agent  MCP Agent
 - 车道预测
 - 轨迹模式识别
 
-**MCP Agent作用**: 结合特征和语义信息进行智能轨迹预测
+**Agent作用**: 结合特征和语义信息进行智能轨迹预测
 
 ## 使用方法
 
